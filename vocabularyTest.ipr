@@ -194,6 +194,9 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$" dialect="PostgreSQL" />
   </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+  </component>
   <component name="dataSourceStorageLocal">
     <data-source name="PostgreSQL - postgres@localhost" uuid="22972d11-f0b6-4062-9518-9c807634d36d">
       <secret-storage>master_key</secret-storage>
