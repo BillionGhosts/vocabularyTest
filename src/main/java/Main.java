@@ -1,3 +1,4 @@
+import Service.EruditService;
 import Service.UserInterfaceService;
 import Service.VocabularyService;
 import models.Vocabulary;
@@ -19,12 +20,15 @@ public class Main {
         Vocabulary voc1 = new Vocabulary();
         int i = 10;
         while (i!=0) {
-            System.out.println("Выберете режим \n1. Управление БД \n0. Выход");
+            System.out.println("Выберете режим \n1. Управление БД \n2. Помощник эрудита \n0. Выход");
             i = Integer.parseInt(bufferedReader.readLine());
             switch (i) {
-                case 1: UserInterfaceService userInterface = new UserInterfaceService(vocService, voc1);
+                case 1:
+                        UserInterfaceService userInterface = new UserInterfaceService(vocService, voc1);
                         userInterface.showInterface();
                         break;
+                case 2:
+                        new EruditService(vocService, voc1).showInterface(); break;
             }
         }
 

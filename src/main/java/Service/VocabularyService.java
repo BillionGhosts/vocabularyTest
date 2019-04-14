@@ -34,5 +34,9 @@ public class VocabularyService {
         return vocDao.showAll();
     }
 
+    public List<Vocabulary> firstLetterVocabulary(char first) {
+        return vocDao.firstLetterQuery(first);
+    }
+
 
 }

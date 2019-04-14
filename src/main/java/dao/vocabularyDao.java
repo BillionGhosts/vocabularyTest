@@ -79,5 +79,20 @@ public class vocabularyDao {
         }
     }
 
+    public List<Vocabulary> firstLetterQuery(char first) {
+        try {Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+            List<Vocabulary> list = (List<Vocabulary>) session.createQuery("From "+Vocabulary.class.getSimpleName()+" AS voc " +
+                                                                           "WHERE voc.word LIKE CONCAT(:firstLetter, '%')").setParameter("firstLetter", first).list();
+            session.close();
+            return list;
+
+        }
+        catch (Exception e) {
+            Session session = HibernateSessionFactoryUtil.getSessionFactory().getCurrentSession();
+            session.close();
+            return null;
+        }
+    }
+
 
 }
