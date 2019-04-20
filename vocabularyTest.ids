@@ -15,11 +15,35 @@
         <object-id>11</object-id>
         <comment>system catalog schema</comment>
       </schema>
-      <sequence id="4" parent="2" name="vocabulary_object_id_seq">
+      <sequence id="4" parent="2" name="character_id_seq">
+        <object-id>16394</object-id>
+        <state-number>580</state-number>
+      </sequence>
+      <sequence id="5" parent="2" name="character_inventory_id_seq">
+        <object-id>16402</object-id>
+        <state-number>581</state-number>
+      </sequence>
+      <sequence id="6" parent="2" name="newtable_item_id_seq">
+        <object-id>16422</object-id>
+        <state-number>599</state-number>
+      </sequence>
+      <sequence id="7" parent="2" name="vocabulary_object_id_seq">
         <object-id>16384</object-id>
         <state-number>568</state-number>
       </sequence>
-      <table id="5" parent="2" name="vocabulary">
+      <table id="8" parent="2" name="character">
+        <object-id>16396</object-id>
+        <state-number>591</state-number>
+      </table>
+      <table id="9" parent="2" name="character_inventory">
+        <object-id>16404</object-id>
+        <state-number>591</state-number>
+      </table>
+      <table id="10" parent="2" name="item">
+        <object-id>16424</object-id>
+        <state-number>602</state-number>
+      </table>
+      <table id="11" parent="2" name="vocabulary">
         <object-id>16386</object-id>
         <state-number>568</state-number>
       </table>

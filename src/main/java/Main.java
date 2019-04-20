@@ -16,8 +16,8 @@ public class Main {
     public static BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main (String[] args) throws SQLException, IOException {
-        VocabularyService vocService = new VocabularyService();
         Vocabulary voc1 = new Vocabulary();
+        VocabularyService vocService = new VocabularyService(voc1);
         int i = 10;
         while (i!=0) {
             System.out.println("Выберете режим \n1. Управление БД \n2. Помощник эрудита \n0. Выход");
