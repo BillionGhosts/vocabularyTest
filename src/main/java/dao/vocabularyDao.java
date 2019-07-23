@@ -2,7 +2,6 @@ package dao;
 
 import models.Vocabulary;
 import org.hibernate.Session;
-import org.hibernate.Transaction;
 import utils.HibernateSessionFactoryUtil;
 
 import java.util.List;
@@ -10,10 +9,11 @@ import java.util.List;
 /**
  * Created by Bill on 14.04.2019.
  */
-public class vocabularyDao {
+public class vocabularyDao extends  EntityDao{
 
     public vocabularyDao() {}
 
+    /*
     public Vocabulary findById(int id) {
         return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(Vocabulary.class, id);
     }
@@ -77,7 +77,7 @@ public class vocabularyDao {
             session.close();
             return null;
         }
-    }
+    }*/
 
     public List<Vocabulary> firstLetterQuery(char first) {
         try {Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();

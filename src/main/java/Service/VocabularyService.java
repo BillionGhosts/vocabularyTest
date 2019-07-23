@@ -1,5 +1,6 @@
 package Service;
 
+import dao.EntityDao;
 import dao.vocabularyDao;
 import models.Vocabulary;
 
@@ -11,32 +12,38 @@ import java.util.List;
 public class VocabularyService {
 
     private vocabularyDao vocDao = new vocabularyDao();
+    private Vocabulary voc;
+    private EntityDao<Vocabulary> entityDao = new EntityDao<Vocabulary>(voc);
 
-    public VocabularyService() {}
+    public VocabularyService(Vocabulary v) {
+        this.voc = v;
+    }
 
     public Vocabulary findVocabulary (int id) {
-        return vocDao.findById(id);
+        return entityDao.findById(id);
     }
 
-    public void saveVocabulary(Vocabulary voc) {
-        vocDao.save(voc);
+    public void saveVocabulary() {
+        entityDao.save();
     }
 
-    public void deleteVocabulary(Vocabulary voc) {
-        vocDao.delete(voc);
+    public void deleteVocabulary() {
+        entityDao.delete();
     }
 
-    public void updateVocabulary(Vocabulary voc) {
-        vocDao.update(voc);
+    public void updateVocabulary() {
+        entityDao.update();
     }
 
     public List<Vocabulary> showAllVocabulary() {
-        return vocDao.showAll();
+         return entityDao.showAll();
     }
 
     public List<Vocabulary> firstLetterVocabulary(char first) {
         return vocDao.firstLetterQuery(first);
     }
 
-
+    public Vocabulary getVoc() {
+        return voc;
+    }
 }

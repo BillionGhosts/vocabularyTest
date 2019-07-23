@@ -30,7 +30,7 @@
     </bytecodeTargetLevel>
   </component>
   <component name="CopyrightManager" default="" />
-  <component name="DataSourceManagerImpl" format="xml" hash="2678848600">
+  <component name="DataSourceManagerImpl" format="xml" hash="648870118">
     <data-source source="LOCAL" name="PostgreSQL - postgres@localhost" uuid="22972d11-f0b6-4062-9518-9c807634d36d">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>

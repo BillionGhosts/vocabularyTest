@@ -45,7 +45,7 @@ public class UserInterfaceService {
         System.out.println("Введите комментарий");
         voc1.setComment(reader.readLine());
         System.out.println("Сохраняю в бд");
-        vocService.saveVocabulary(voc1);
+        vocService.saveVocabulary();
         System.out.println("Сохраненный обьект: \n"+voc1.toString() );
     }
 
@@ -61,15 +61,15 @@ public class UserInterfaceService {
         voc2.setWord(reader.readLine());
         System.out.println("Введите новый комментарий");
         voc2.setComment(reader.readLine());
-        vocService.updateVocabulary(voc2);
+        vocService.updateVocabulary();
         System.out.println("Апдейт выполнен");
-        vocService.findVocabulary(voc2.getId());
+        vocService.findVocabulary(vocService.getVoc().getId());
     }
 
     public void deleteQuery() throws IOException {
         System.out.println("Введите айдишник записи, которую хотите удалить");
         voc2 = vocService.findVocabulary(Integer.parseInt(reader.readLine()));
-        vocService.deleteVocabulary(voc2);
+        vocService.deleteVocabulary();
         System.out.println("Запись удалена");
 
     }
