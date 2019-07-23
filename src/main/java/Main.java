@@ -1,5 +1,3 @@
-import Service.EruditService;
-import Service.UserInterfaceService;
 import Service.VocabularyService;
 import models.Vocabulary;
 
@@ -7,6 +5,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.SQLException;
+
+import static view.MainView.showView;
 
 /**
  * Created by Bill on 14.04.2019.
@@ -18,7 +18,14 @@ public class Main {
     public static void main (String[] args) throws SQLException, IOException {
         VocabularyService vocService = new VocabularyService();
         Vocabulary voc1 = new Vocabulary();
-        int i = 10;
+
+        /**
+         * статический метод из @MainView
+         */
+        showView(); //
+
+        //Логика для тесктового интерфейса
+        /*int i = 10;
         while (i!=0) {
             System.out.println("Выберете режим \n1. Управление БД \n2. Помощник эрудита \n0. Выход");
             i = Integer.parseInt(bufferedReader.readLine());
@@ -30,7 +37,7 @@ public class Main {
                 case 2:
                         new EruditService(vocService, voc1).showInterface(); break;
             }
-        }
+        }*/
 
     }
 

@@ -18,9 +18,9 @@ public class UserInterfaceService {
 
     public BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-    public UserInterfaceService(VocabularyService vocService, Vocabulary voc1) {
-        this.vocService = vocService;
-        this.voc1 = voc1;
+    public UserInterfaceService() {
+        vocService = new VocabularyService();
+        voc1 = new Vocabulary();
     }
 
     public void showInterface() throws IOException {

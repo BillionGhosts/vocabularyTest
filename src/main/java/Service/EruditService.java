@@ -27,9 +27,10 @@ public class EruditService {
     private String inputLetters;                                                //входище буквы, которые вводит пользователь
     private String[] letters;                                                   //массив этих самых букв, в каждой ячейке - буква. Тоже костыль наверн, чтобы потом достать из ячейки чар
 
-    public EruditService(VocabularyService vocSer, Vocabulary voc) {
-        this.vocService = vocSer;
-        this.voc1 = voc;
+    public EruditService() {
+
+        vocService = new VocabularyService();
+        voc1 = new Vocabulary();
     }
 
     public void showInterface() throws IOException{
